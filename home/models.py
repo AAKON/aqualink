@@ -21,11 +21,22 @@ class Clients(models.Model):
         return self.name
 
 
-# class Products(models.Model):
-#
-#     name = models.CharField(max_length = 100)
-#     img_services = models.ImageField(upload_to='home/clients')
-#
-#     def __str__(self):
-#         return self.name
-#
+class About_us(models.Model):
+
+    info = models.CharField(max_length = 100)
+    decription = models.TextField()
+    img_about = models.ImageField(upload_to='home/about')
+    about_link = models.TextField()
+
+    def __str__(self):
+        return self.info
+
+
+class Services_div(models.Model):
+
+    title = models.CharField(max_length = 150)
+    description = models.TextField()
+    icon = models.CharField(max_length = 100)
+
+    def __str__(self):
+        return self.title

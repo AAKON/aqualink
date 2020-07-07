@@ -59,18 +59,20 @@
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
       <div class="container">
+        {% for about in about_us %}
 
         <div class="row no-gutters">
           <div class="col-lg-6 video-box">
-            <img src="static/assets/images/services/services-circle-2-1.png" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=yhVgUyPFzMA" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            <img src="{{ about.img_about.url }}" class="img-fluid" alt="">
+            <a href="{{ about.about_link }}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
 
             <div class="section-title">
               <h2>About Us</h2>
-              <h5>GET BEST SOLUTIONS BY OUR SERVICES</h5>
+
+              <h5>{{ about.decription }}</h5>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -85,6 +87,7 @@
 
           </div>
         </div>
+        {% endfor %}
 
       </div>
     </section><!-- End About Us Section -->
@@ -188,12 +191,14 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="icofont-computer"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          {% for service in services_div %}
+          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="{{forloop.counter}}">
+            <div class="icon"><i class="{{ service.icon }}"></i></div>
+            <h4 class="title"><a href="">{{ service.title }}</a></h4>
+            <p class="description">{{ service.description }}</p>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+          {% endfor %}
+          <!-- <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
             <h4 class="title"><a href="">Dolor Sitema</a></h4>
             <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
@@ -217,7 +222,9 @@
             <div class="icon"><i class="icofont-tasks-alt"></i></div>
             <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
             <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-          </div>
+          </div> -->
+
+
         </div>
 
       </div>
