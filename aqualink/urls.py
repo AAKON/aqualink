@@ -20,10 +20,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 from home import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,name='admin'),
 
     path('',views.home,name='home'),
-    path('product_details/<int:product_id>',views.product,name='product')
+    path('product_details/<int:product_id>',views.product,name='product'),
+    path('email',views.email,name='email'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 12, 2020 at 10:26 PM
+-- Generation Time: Jul 16, 2020 at 07:44 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -110,7 +110,27 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 (45, 'Can add faq', 12, 'add_faq'),
 (46, 'Can change faq', 12, 'change_faq'),
 (47, 'Can delete faq', 12, 'delete_faq'),
-(48, 'Can view faq', 12, 'view_faq');
+(48, 'Can view faq', 12, 'view_faq'),
+(49, 'Can add features', 13, 'add_features'),
+(50, 'Can change features', 13, 'change_features'),
+(51, 'Can delete features', 13, 'delete_features'),
+(52, 'Can view features', 13, 'view_features'),
+(53, 'Can add overview', 14, 'add_overview'),
+(54, 'Can change overview', 14, 'change_overview'),
+(55, 'Can delete overview', 14, 'delete_overview'),
+(56, 'Can view overview', 14, 'view_overview'),
+(57, 'Can add how_works', 15, 'add_how_works'),
+(58, 'Can change how_works', 15, 'change_how_works'),
+(59, 'Can delete how_works', 15, 'delete_how_works'),
+(60, 'Can view how_works', 15, 'view_how_works'),
+(61, 'Can add video_product', 16, 'add_video_product'),
+(62, 'Can change video_product', 16, 'change_video_product'),
+(63, 'Can delete video_product', 16, 'delete_video_product'),
+(64, 'Can view video_product', 16, 'view_video_product'),
+(65, 'Can add specification', 17, 'add_specification'),
+(66, 'Can change specification', 17, 'change_specification'),
+(67, 'Can delete specification', 17, 'delete_specification'),
+(68, 'Can view specification', 17, 'view_specification');
 
 -- --------------------------------------------------------
 
@@ -137,7 +157,7 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$180000$A5mZU4ldgEh7$VZZwCTBHmdNLi47aoQYST1/NYJCufJsD1YSy7+kiirc=', '2020-07-12 01:10:08.919457', 1, 'faisal', '', '', 'faisalakon444@gmail.com', 1, 1, '2020-07-09 20:49:39.394128');
+(1, 'pbkdf2_sha256$180000$A5mZU4ldgEh7$VZZwCTBHmdNLi47aoQYST1/NYJCufJsD1YSy7+kiirc=', '2020-07-14 19:56:26.994311', 1, 'faisal', '', '', 'faisalakon444@gmail.com', 1, 1, '2020-07-09 20:49:39.394128');
 
 -- --------------------------------------------------------
 
@@ -212,7 +232,25 @@ INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`,
 (25, '2020-07-12 18:29:19.655580', '9', 'Sensometer ---> How to setup this device?', 1, '[{\"added\": {}}]', 12, 1),
 (26, '2020-07-12 18:29:49.454788', '10', 'Sensometer ---> Can I send data to my own server?', 1, '[{\"added\": {}}]', 12, 1),
 (27, '2020-07-12 18:30:19.448552', '11', 'Sensometer ---> Does the device has a battery backup?', 1, '[{\"added\": {}}]', 12, 1),
-(28, '2020-07-12 18:30:49.781318', '12', 'Sensometer ---> How can the device help me reduce electricity bills?', 1, '[{\"added\": {}}]', 12, 1);
+(28, '2020-07-12 18:30:49.781318', '12', 'Sensometer ---> How can the device help me reduce electricity bills?', 1, '[{\"added\": {}}]', 12, 1),
+(29, '2020-07-15 01:48:04.060755', '1', 'Smart Attendance System ---> Fingerprint reader with durable and highly accurate optical sensor.\r\n                                                                Capacity : From 1000 upto 5000', 1, '[{\"added\": {}}]', 13, 1),
+(30, '2020-07-15 01:50:30.001428', '2', 'Smart Attendance System ---> 1-touch a-second employee recognition', 1, '[{\"added\": {}}]', 13, 1),
+(31, '2020-07-15 01:52:24.416593', '3', 'Smart Attendance System ---> Easy, interactive, secured registration process', 1, '[{\"added\": {}}]', 13, 1),
+(32, '2020-07-15 01:55:24.720924', '4', 'Smart Attendance System ---> Access control with machine readable cards\r\n                                                                    Capacity : Unlimited', 1, '[{\"added\": {}}]', 13, 1),
+(33, '2020-07-15 01:56:17.447542', '5', 'Smart Attendance System ---> Cloud based as required', 1, '[{\"added\": {}}]', 13, 1),
+(34, '2020-07-15 01:58:49.462750', '6', 'Smart Attendance System ---> Wireless Connectivity (WiFi), Wired Ethernet GPRS Connectivity', 1, '[{\"added\": {}}]', 13, 1),
+(35, '2020-07-15 02:03:38.261362', '7', 'Smart Attendance System ---> Buzzer and LED indicators\r\n                                                                    Smart Access Control: Door sensor, Exit button, Alarm, Door Bell can be inco', 1, '[{\"added\": {}}]', 13, 1),
+(36, '2020-07-15 02:06:46.061820', '8', 'Smart Attendance System ---> Automatic Synchronization among all the connected devices\r\n                                                                    Access Control : Requirement based access co', 1, '[{\"added\": {}}]', 13, 1),
+(37, '2020-07-15 02:07:50.454487', '9', 'Smart Attendance System ---> A user friendly web application to monitor attendance data', 1, '[{\"added\": {}}]', 13, 1),
+(38, '2020-07-15 02:09:45.253441', '10', 'Smart Attendance System ---> Organization policies can be automated with the software\r\n                                                                    Custom Report : Any Custom report can be prov', 1, '[{\"added\": {}}]', 13, 1),
+(39, '2020-07-15 02:18:34.896111', '10', 'Smart Attendance System ---> Organization policies can be automated with the software Custom Report : Any Custom report can be provided based on the requirement', 2, '[{\"changed\": {\"fields\": [\"Feature name\"]}}]', 13, 1),
+(40, '2020-07-15 02:42:40.674737', '3', 'Smart Attendance System', 1, '[{\"added\": {}}]', 15, 1),
+(41, '2020-07-15 02:43:37.649962', '4', 'Sensometer', 1, '[{\"added\": {}}]', 15, 1),
+(42, '2020-07-15 02:44:58.541164', '1', 'Sensometer', 1, '[{\"added\": {}}]', 14, 1),
+(43, '2020-07-15 02:47:31.039132', '2', 'Smart Attendance System', 1, '[{\"added\": {}}]', 14, 1),
+(44, '2020-07-16 05:06:25.351176', '1', 'Smart Attendance System', 1, '[{\"added\": {}}]', 17, 1),
+(45, '2020-07-16 06:06:20.808250', '1', 'Smart Attendance System', 1, '[{\"added\": {}}]', 16, 1),
+(46, '2020-07-16 06:06:58.243636', '2', 'Sensometer', 1, '[{\"added\": {}}]', 16, 1);
 
 -- --------------------------------------------------------
 
@@ -239,9 +277,14 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (7, 'home', 'about_div'),
 (8, 'home', 'clients_div'),
 (12, 'home', 'faq'),
+(13, 'home', 'features'),
 (9, 'home', 'home_top_div'),
+(15, 'home', 'how_works'),
+(14, 'home', 'overview'),
 (11, 'home', 'product'),
 (10, 'home', 'services_div'),
+(17, 'home', 'specification'),
+(16, 'home', 'video_product'),
 (6, 'sessions', 'session');
 
 -- --------------------------------------------------------
@@ -282,7 +325,11 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (18, 'home', '0001_initial', '2020-07-09 21:57:17.559329'),
 (19, 'home', '0002_product', '2020-07-12 01:04:26.649980'),
 (20, 'home', '0003_faq', '2020-07-12 18:19:23.876078'),
-(21, 'home', '0004_auto_20200713_0024', '2020-07-12 18:24:45.753827');
+(21, 'home', '0004_auto_20200713_0024', '2020-07-12 18:24:45.753827'),
+(22, 'home', '0005_features', '2020-07-14 21:17:05.036071'),
+(23, 'home', '0006_how_works_overview', '2020-07-15 02:34:25.815003'),
+(24, 'home', '0007_video_product', '2020-07-16 03:06:27.525531'),
+(25, 'home', '0008_specification', '2020-07-16 04:51:13.888148');
 
 -- --------------------------------------------------------
 
@@ -302,7 +349,8 @@ CREATE TABLE `django_session` (
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
 ('iinm791b2d5d4texvgi7u8rxi7gxsu5t', 'Njk0ZGEwMWUyZTM5MjFjMjM2ODlmYjM0YmIxY2ZmZjAxYjUxZDJiNTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MDdlOWQ5ZmY5MDJhMWI2OWU5YzA1ZDFkN2IyYzFhZmRkYWU2MWEzIn0=', '2020-07-23 21:58:17.233627'),
-('jdogs9wf8k3g2z8eslcb9lr8eseznmgm', 'Njk0ZGEwMWUyZTM5MjFjMjM2ODlmYjM0YmIxY2ZmZjAxYjUxZDJiNTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MDdlOWQ5ZmY5MDJhMWI2OWU5YzA1ZDFkN2IyYzFhZmRkYWU2MWEzIn0=', '2020-07-26 01:10:09.102373');
+('jdogs9wf8k3g2z8eslcb9lr8eseznmgm', 'Njk0ZGEwMWUyZTM5MjFjMjM2ODlmYjM0YmIxY2ZmZjAxYjUxZDJiNTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MDdlOWQ5ZmY5MDJhMWI2OWU5YzA1ZDFkN2IyYzFhZmRkYWU2MWEzIn0=', '2020-07-26 01:10:09.102373'),
+('xerb8qi2h68qzc2fuiaojzgvikj69qto', 'Njk0ZGEwMWUyZTM5MjFjMjM2ODlmYjM0YmIxY2ZmZjAxYjUxZDJiNTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MDdlOWQ5ZmY5MDJhMWI2OWU5YzA1ZDFkN2IyYzFhZmRkYWU2MWEzIn0=', '2020-07-28 19:56:27.111752');
 
 -- --------------------------------------------------------
 
@@ -380,6 +428,35 @@ INSERT INTO `home_faq` (`id`, `question`, `answer`, `product_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `home_features`
+--
+
+CREATE TABLE `home_features` (
+  `id` int(11) NOT NULL,
+  `feature_name` longtext NOT NULL,
+  `icon` varchar(100) NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `home_features`
+--
+
+INSERT INTO `home_features` (`id`, `feature_name`, `icon`, `product_id`) VALUES
+(1, 'Fingerprint reader with durable and highly accurate optical sensor.\r\n                                                                Capacity : From 1000 upto 5000', 'icofont-finger-print', 2),
+(2, '1-touch a-second employee recognition', 'icofont-touch', 2),
+(3, 'Easy, interactive, secured registration process', 'icofont-id-card', 2),
+(4, 'Access control with machine readable cards\r\n                                                                    Capacity : Unlimited', 'icofont-ui-v-card', 2),
+(5, 'Cloud based as required', 'icofont-cloud-refresh', 2),
+(6, 'Wireless Connectivity (WiFi), Wired Ethernet GPRS Connectivity', 'icofont-wifi', 2),
+(7, 'Buzzer and LED indicators\r\n                                                                    Smart Access Control: Door sensor, Exit button, Alarm, Door Bell can be incorporated', 'icofont-bell', 2),
+(8, 'Automatic Synchronization among all the connected devices\r\n                                                                    Access Control : Requirement based access control', 'icofont-network', 2),
+(9, 'A user friendly web application to monitor attendance data', 'icofont-dashboard-web', 2),
+(10, 'Organization policies can be automated with the software Custom Report : Any Custom report can be provided based on the requirement', 'icofont-spreadsheet', 2);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `home_home_top_div`
 --
 
@@ -399,6 +476,49 @@ INSERT INTO `home_home_top_div` (`id`, `title`, `descriptison`, `img_top_div`) V
 (2, 'WEB & APP DEVELOPMENT', 'As a means to safely and securely access all the data provided by our products, our team has built beautiful and intuitive web panels. The control dials and report feature in the web panels is key to know more about your business and optimise work efficiency where necessary.', 'home/services/web-and-app-design_sXFVH0E.jpg'),
 (3, 'ROBOTICS & INDUSTRIAL AUTOMATION', 'Robotics industrial automation is changing the face of production. Manufacturers around the globe are implementing some form of automation to become more efficient, safe and ultimately to increase revenues. While some advantages are obvious, there may be more than you think.', 'home/services/db_shenker_industrial_automation_magento_blog_Q21x0UY.jpg'),
 (4, 'IOT & EMBEDDED SYSTEMS', 'Aqualink\'s IoT software and embedded system building blocks to accelerate the development and time-to-market of secure, connected products and services that are powering smart cities, enterprises, factories, homes and vehicles.', 'home/services/vulnerability-management-iot-embedded-systems_nkIqkti.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home_how_works`
+--
+
+CREATE TABLE `home_how_works` (
+  `id` int(11) NOT NULL,
+  `img_div` varchar(100) NOT NULL,
+  `description` longtext NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `home_how_works`
+--
+
+INSERT INTO `home_how_works` (`id`, `img_div`, `description`, `product_id`) VALUES
+(3, 'home/product/attendance-diagram_g2JdoBz.png', 'With our attendance device you can get access through fingerprint and rfid card. We have several LED indicators that will give you the status messages. For ensuring internet connectivity you can choose any options. This supports both ethernet, wifi and modem connectivity. This attendance data is sent to the server in real time.\r\n\r\nIf internet connection is not available then data will be stored locally and sent again after establishing the connectivity.An interactive web and mobile application is there where you can monitor the attendance data. You can also get all the management features based on the package chosen.', 2),
+(4, 'home/product/csm-diagram-1024x411.png', 'Your warehouse is fully under supervision with our device sensometer. Sensometer is a monitoring and controlling device that will automate your industrial monitoring process. With our device you can real time monitor the environmental parameters of the storage room. Alongside this you can know the door of the cold storage is opened or closed (for how many times/duration).\r\n\r\nWith our device you can control the compressor of the chiller room with remote starting and closing feature, You can also know the total running hours and electricity consumption of individual compressors. All this data is secured in our cloud server. From where you can see desired reports and monitor in real time around the world. We have a separate web application and an interactive mobile app for this purpose.', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home_overview`
+--
+
+CREATE TABLE `home_overview` (
+  `id` int(11) NOT NULL,
+  `left_div_270_552` varchar(100) NOT NULL,
+  `right_div_600_500` varchar(100) NOT NULL,
+  `description` longtext NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `home_overview`
+--
+
+INSERT INTO `home_overview` (`id`, `left_div_270_552`, `right_div_600_500`, `description`, `product_id`) VALUES
+(1, 'home/product/intre.JPG', 'home/product/this-one-600x500.jpg', 'Sensometer sends sensor data periodically to the cloud where it can be accessed via a website and a mobile app. This website consists of statistical data which is arranged in an easy to use dashboard. Reports can be generated here as well as historical data can be seen which would be beneficial for the end user. Our device is most utilized in storages , where perishable goods are stored, grain silo, any cold storage environments e.g. Frozen food and meat processing factory, Warehouse Freezers, Cold Storage Trucks, Leather storage, Beverage factory, Tobacco factory, Paper mills or any premises that has relation with the environment.\r\n\r\n\r\nOptional features include the GPS which can be used in storage vehicles. The Door Trigger alert notifies the user how long the door of the storage has been open and if opted for push notification, sends a message to the user about the current condition of the storage. The reports generated reflect the conditions of the storage while the door was open.\r\nPush Notification alerts can be modified to send messages when for example, user has set a minimum limit for any parameter and the device detects that the threshold has been crossed.\r\n\r\nAnother key feature of our device is remote compressor control. Where a user can remotely turn on and off the compressor around the world. User can calculate the total electricity consumption of the whole industry which in turn can help the user ensure efficient use of electricity. Data is always synchronized with the server with proper security. Data Storage is dependant upon the package chosen. Further details regarding package can be learnt from the provided hotline number.', 1),
+(2, 'home/product/web-app-diagram-1.png', 'home/product/attpc.png', 'One touch is all it takes for access control with our own custom made software. Which will facilitate the organization by automating the processes it encounters everyday. The implementation of the company policies makes life easier for the owner to run the organization smoothly. We have developed some management features that makes life easier for HR, with some of the most common policies that an organization follows.', 2);
 
 -- --------------------------------------------------------
 
@@ -447,6 +567,46 @@ INSERT INTO `home_services_div` (`id`, `title`, `description`, `icon`) VALUES
 (2, 'AI & MACHINE LEARNING', 'For future business AI and machine learning is the most important technology for a better representation of your unstructured data. AI-driven software is helping companies to increase manufacturing and logistics efficiency, improve customer relationships, reducing human errors and boost sales. We can serve you with extensive analysis and actionable predictions that will help you to grow your business.', 'icofont-robot-face'),
 (3, 'WEB & APP DEVELOPMENT', 'As a means to safely and securely access all the data provided by our products, our team has built beautiful and intuitive web panels. The control dials and report feature in the web panels is key to know more about your business and optimise work efficiency where necessary.', 'icofont-responsive'),
 (4, 'ROBOTICS & INDUSTRIAL AUTOMATION', 'Robotics industrial automation is changing the face of production. Manufacturers around the globe are implementing some form of automation to become more efficient, safe and ultimately to increase revenues. While some advantages are obvious, there may be more than you think.', 'icofont-help-robot');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home_specification`
+--
+
+CREATE TABLE `home_specification` (
+  `id` int(11) NOT NULL,
+  `img_left_div` varchar(100) NOT NULL,
+  `img_right_div` varchar(100) NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `home_specification`
+--
+
+INSERT INTO `home_specification` (`id`, `img_left_div`, `img_right_div`, `product_id`) VALUES
+(1, 'home/product/item-spec.JPG', 'home/product/572d-600x600.jpg', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home_video_product`
+--
+
+CREATE TABLE `home_video_product` (
+  `id` int(11) NOT NULL,
+  `video` varchar(100) NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `home_video_product`
+--
+
+INSERT INTO `home_video_product` (`id`, `video`, `product_id`) VALUES
+(1, 'home/product/How_to_Solve_a_3x3_Rubiks_Cube_In_No_Time_-_The_Easiest_Tutorial.mp4', 2),
+(2, 'home/product/How_to_Solve_the_Rubiks_Cube_--_bangla_tutorial_--.mp4', 1);
 
 --
 -- Indexes for dumped tables
@@ -545,10 +705,31 @@ ALTER TABLE `home_faq`
   ADD KEY `home_faq_product_id_9170b7f6_fk_home_product_id` (`product_id`);
 
 --
+-- Indexes for table `home_features`
+--
+ALTER TABLE `home_features`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `home_features_product_id_249e36a9_fk_home_product_id` (`product_id`);
+
+--
 -- Indexes for table `home_home_top_div`
 --
 ALTER TABLE `home_home_top_div`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `home_how_works`
+--
+ALTER TABLE `home_how_works`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `home_how_works_product_id_e75a2726_fk_home_product_id` (`product_id`);
+
+--
+-- Indexes for table `home_overview`
+--
+ALTER TABLE `home_overview`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `home_overview_product_id_415515ef_fk_home_product_id` (`product_id`);
 
 --
 -- Indexes for table `home_product`
@@ -561,6 +742,20 @@ ALTER TABLE `home_product`
 --
 ALTER TABLE `home_services_div`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `home_specification`
+--
+ALTER TABLE `home_specification`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `home_specification_product_id_82a90eee_fk_home_product_id` (`product_id`);
+
+--
+-- Indexes for table `home_video_product`
+--
+ALTER TABLE `home_video_product`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `home_video_product_product_id_9084b05e_fk_home_product_id` (`product_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -582,7 +777,7 @@ ALTER TABLE `auth_group_permissions`
 -- AUTO_INCREMENT for table `auth_permission`
 --
 ALTER TABLE `auth_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `auth_user`
@@ -606,19 +801,19 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `django_content_type`
 --
 ALTER TABLE `django_content_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `home_about_div`
@@ -639,10 +834,28 @@ ALTER TABLE `home_faq`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT for table `home_features`
+--
+ALTER TABLE `home_features`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `home_home_top_div`
 --
 ALTER TABLE `home_home_top_div`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `home_how_works`
+--
+ALTER TABLE `home_how_works`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `home_overview`
+--
+ALTER TABLE `home_overview`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `home_product`
@@ -655,6 +868,18 @@ ALTER TABLE `home_product`
 --
 ALTER TABLE `home_services_div`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `home_specification`
+--
+ALTER TABLE `home_specification`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `home_video_product`
+--
+ALTER TABLE `home_video_product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -699,6 +924,36 @@ ALTER TABLE `django_admin_log`
 --
 ALTER TABLE `home_faq`
   ADD CONSTRAINT `home_faq_product_id_9170b7f6_fk_home_product_id` FOREIGN KEY (`product_id`) REFERENCES `home_product` (`id`);
+
+--
+-- Constraints for table `home_features`
+--
+ALTER TABLE `home_features`
+  ADD CONSTRAINT `home_features_product_id_249e36a9_fk_home_product_id` FOREIGN KEY (`product_id`) REFERENCES `home_product` (`id`);
+
+--
+-- Constraints for table `home_how_works`
+--
+ALTER TABLE `home_how_works`
+  ADD CONSTRAINT `home_how_works_product_id_e75a2726_fk_home_product_id` FOREIGN KEY (`product_id`) REFERENCES `home_product` (`id`);
+
+--
+-- Constraints for table `home_overview`
+--
+ALTER TABLE `home_overview`
+  ADD CONSTRAINT `home_overview_product_id_415515ef_fk_home_product_id` FOREIGN KEY (`product_id`) REFERENCES `home_product` (`id`);
+
+--
+-- Constraints for table `home_specification`
+--
+ALTER TABLE `home_specification`
+  ADD CONSTRAINT `home_specification_product_id_82a90eee_fk_home_product_id` FOREIGN KEY (`product_id`) REFERENCES `home_product` (`id`);
+
+--
+-- Constraints for table `home_video_product`
+--
+ALTER TABLE `home_video_product`
+  ADD CONSTRAINT `home_video_product_product_id_9084b05e_fk_home_product_id` FOREIGN KEY (`product_id`) REFERENCES `home_product` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

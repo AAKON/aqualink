@@ -14,7 +14,7 @@
     <h1 style="padding-top:50px; font-weight: 900; color:#fff">{{product.name}}</h1>
     <hr style="border: 3px solid #fff; width:500px;">
     <p style="padding:50px; color:#fff; font-size:20px">{{product.description}}</p>
-    <a href="{{product.brochure.url}}"><button class="btn btn-danger" style="margin-bottom:50px" type="button" name="button">Download Our Brochure</button></a>
+    <a target="_blank" href="{{product.brochure.url}}"><button class="btn btn-danger" style="margin-bottom:50px" type="button" name="button">Download Our Brochure</button></a>
 
   </div>
 
@@ -50,36 +50,95 @@
         <div class="container">
 
           <div class="row no-gutters">
+            {% for over in overview %}
 
-            <div style="text-align:center" class="col-lg-3 col-md-6 content-item" data-aos="fade-up">
+            {% if over.left_div_270_552 %}
+            <div style="text-align:center" class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
               <h2>Sensores</h2>
               <br>
-              <img style="width:100%" src="{% static 'assets/images/sensometer/intre.JPG' %}" alt="">
+              <img style="width:100%" src="{{over.left_div_270_552.url}}" alt="">
             </div>
-
-            <div style="text-align:center" class="col-lg-6 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+            {% endif %}
+            {% if over.right_div_600_500 %}
+            <div style="text-align:center" class="col-lg-8 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
               <h2>Software</h2>
               <br>
-              <img style="width:100%" src="{% static 'assets/images/sensometer/this-one-600x500.jpg' %}" alt="">
+              <img style="width:100%" src="{{over.right_div_600_500.url}}" alt="">
 
             </div>
+            {% endif %}
+            {% endfor %}
 
-            <div style="text-align:center" class="col-lg-3 col-md-6 content-item" data-aos="fade-up">
-              <h2>Feature</h2>
-              <br>
-              <img style="width:100%" src="{% static 'assets/images/sensometer/intre.JPG' %}" alt="">
+
+            {% if video_product %}
+            {% for video in video_product %}
+            <div  id="about" class="col-lg-12 col-md-6 content-item about" data-aos="fade-up" data-aos-delay="100">
+              <!-- <div style="display: flex;align-items: center;justify-content: center;" class="col-lg-12 video-box">
+                <img style="width:100%; max-height:400px "src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" class="img-fluid" alt="">
+                <a href="{{video.video.url}}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+              </div> -->
+              <video width="100%" controls>
+                <source src="{{video.video.url}}" type="video/mp4">
+
+              </video>
             </div>
+            {% endfor %}
+            {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {% if features %}
+            <!-- <div class="col-lg-12" style="text-align:center;"><h2>Feature</h2></div> -->
+            <div class="col-lg-12 section-title">
+              <h2 style="margin-top:30px">Features</h2>
+            </div>
+            <div style="height: 200px;margin-top:-30px !important;text-align:center; width: 30em;overflow-x: auto;white-space: nowrap;" class="col-lg-12 col-md-6 content-item" data-aos="fade-in">
+
+
+
+
+              {% for feature in features %}
+              <div style="margin:2px;" class="row">
+
+                <div style="display: flex;align-items: center;justify-content: center; background-color:rgba(92,118,141,0.8);"   class="col-lg-1 card">
+                  <span style="color:#fff"><i  class=" {{feature.icon}}"></i></span>
+
+                </div>
+                <div style="display: flex;align-items: center;justify-content: center;white-space: pre-line;background-color:rgba(92,118,141,0.2);"  class="col-lg-11 card">
+                  <p style="color:black">{{feature.feature_name}}</p>
+                </div>
+
+              </div>
+
+              {% endfor %}
+
+
+
+            </div>
+            {% endif %}
 
 
             <div class="col-lg-12 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-              <p>Sensometer sends sensor data periodically to the cloud where it can be accessed via a website and a mobile app. This website consists of statistical data which is arranged in an easy to use dashboard. Reports can be generated here as well as historical data can be seen which would be beneficial for the end user. Our device is most utilized in storages , where perishable goods are stored, grain silo, any cold storage environments e.g. Frozen food and meat processing factory, Warehouse Freezers, Cold Storage Trucks, Leather storage, Beverage factory, Tobacco factory, Paper mills or any premises that has relation with the environment.
-
-
-Optional features include the GPS which can be used in storage vehicles. The Door Trigger alert notifies the user how long the door of the storage has been open and if opted for push notification, sends a message to the user about the current condition of the storage. The reports generated reflect the conditions of the storage while the door was open.
-Push Notification alerts can be modified to send messages when for example, user has set a minimum limit for any parameter and the device detects that the threshold has been crossed.
-
-Another key feature of our device is remote compressor control. Where a user can remotely turn on and off the compressor around the world. User can calculate the total electricity consumption of the whole industry which in turn can help the user ensure efficient use of electricity. Data is always synchronized with the server with proper security. Data Storage is dependant upon the package chosen. Further details regarding package can be learnt from the provided hotline number.</p>
-
+              {% for over in overview %}
+              <p style="color:#000;text-align: justify;">
+                {{over.description}}
+              </p>
+                {% endfor %}
             </div>
 
           </div>
@@ -94,29 +153,59 @@ Another key feature of our device is remote compressor control. Where a user can
         <div class="container">
 
           <div class="row no-gutters">
-
+            {% for how in how_works %}
             <div class="col-lg-12 col-md-6 content-item" data-aos="fade-up">
-              <img style="width:100%" src="{% static 'assets/images/sensometer/csm-diagram-1024x411.png' %}" alt="">
+              <img style="width:100%" src="{{how.img_div.url}}" alt="">
             </div>
 
             <div class="col-lg-12 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-              <p>Your warehouse is fully under supervision with our device sensometer. Sensometer is a monitoring and controlling device that will automate your industrial monitoring process. With our device you can real time monitor the environmental parameters of the storage room. Alongside this you can know the door of the cold storage is opened or closed (for how many times/duration).
-With our device you can control the compressor of the chiller room with remote starting and closing feature, You can also know the total running hours and electricity consumption of individual compressors. All this data is secured in our cloud server. From where you can see desired reports and monitor in real time around
- the world. We have a separate web application and an interactive mobile app for this purpose.</p>
+              <p style="color:#000;text-align: justify;">
+                {{how.description}}
+              </p>
 
             </div>
-
+            {% endfor %}
           </div>
 
         </div>
       </section><!-- End About Lists Section -->
     </div>
+
+
+
     <div class="tab-pane fade" id="Pricing_Details">
         <p>Messages tab content ...</p>
     </div>
+
+
+
     <div class="tab-pane fade show" id="Specification">
-        <p>Home tab content ...</p>
+      <section class="about-lists">
+      <div class="container">
+
+      <div class="row no-gutters">
+      {% for spec in specification %}
+
+      <div style="text-align:center" class="col-lg-6 col-md-6 content-item" data-aos="fade-up">
+
+        <img width="100%" src="{{spec.img_left_div.url}}" alt="">
+      </div>
+
+      <div style="text-align:center" class="col-lg-6 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+
+        <img width="100%" src="{{spec.img_right_div.url}}" alt="">
+
+      </div>
+
+
+      {% endfor %}
     </div>
+    </div>
+  </section>
+    </div>
+
+
+
     <div class="tab-pane fade" id="Clients_Overview">
         <p>Profile tab content ...</p>
     </div>

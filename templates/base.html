@@ -81,11 +81,22 @@
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
           <li class="active"><a href="/">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Products</a></li>
-          <li><a href="#team">Clients</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="/#about">About Us</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li class="drop-down"><a href="/#product">Products</a>
+            <ul>
+              {% for product in products %}
+              {% ifnotequal request.get_full_path '/' %}
+              <li><a href="{{product.pk}}">{{product.name}}</a></li>
+              {% else %}
+              <li><a href="product_details/{{product.pk}}">{{product.name}}</a></li>
+              {% endifnotequal %}
+
+              {% endfor %}
+            </ul>
+          </li>
+          <li><a href="/#team">Clients</a></li>
+          <li><a href="/#contact">Contact Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 

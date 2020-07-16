@@ -25,7 +25,18 @@ SECRET_KEY = '#j5sbb*88t_(5%@nl2t8$g+!q#f7ihg)*-_78!6vdudf2)u2&_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+#email settings
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'faisalakon444@gmail.com'
+EMAIL_HOST_PASSWORD = 'f4!54171'
+# EMAIL_HOST_PASSWORD = 'umlesfbqocavswqd'
+
 
 
 # Application definition
@@ -81,7 +92,7 @@ DATABASES = {
     },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'aqualink',
+        'NAME': 'aqualink3',
         'USER':'root',
         'PASSWORD':'',
         'HOST':'localhost',
